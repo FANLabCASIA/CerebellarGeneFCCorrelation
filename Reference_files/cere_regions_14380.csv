@@ -1,0 +1,45 @@
+"","structure_id","slab_num","well_id","slab_type","structure_acronym","structure_name","polygon_id","mri_voxel_x","mri_voxel_y","mri_voxel_z","mni_x","mni_y","mni_z"
+"3",4735,62,126435762,"CB","He-IV","IV, left, lateral hemisphere",113255856,107,127,124,-16,-33,-18
+"12",4738,61,126435776,"CB","He-VI","VI, left, lateral hemisphere",113222846,121,129,148,-30,-57,-20
+"17",4735,62,126435794,"CB","He-IV","IV, left, lateral hemisphere",113255857,107,126,125,-16,-34,-17
+"18",4738,62,126435716,"CB","He-VI","VI, left, lateral hemisphere",113258156,107,136,170,-16,-79,-27
+"19",4720,63,126435766,"CB","PV-V","V, left, paravermis",113525753,96,112,155,-5,-64,-3
+"20",4739,62,126435842,"CB","He-Crus I","Crus I, left, lateral hemisphere",113258197,107,139,178,-16,-87,-30
+"391",4719,63,126435750,"CB","PV-IV","IV, left, paravermis",113525653,96,110,140,-5,-49,-1
+"392",4718,63,126435734,"CB","PV-III","III, left, paravermis",113525665,96,124,134,-5,-43,-15
+"393",4719,63,126435718,"CB","PV-IV","IV, left, paravermis",113525652,96,112,140,-5,-49,-3
+"394",4718,63,126435892,"CB","PV-III","III, left, paravermis",113525664,96,126,133,-5,-42,-17
+"395",4720,63,126435782,"CB","PV-V","V, left, paravermis",113525754,96,112,156,-5,-65,-3
+"396",4725,63,126435720,"CB","PV-VIIB","VIIB, left, paravermis",113901824,96,160,167,-5,-76,-51
+"397",4724,63,126435894,"CB","PV-Crus II","Crus II, left, paravermis",113522737,96,150,178,-5,-87,-41
+"398",4723,63,126435878,"CB","PV-Crus I","Crus I, left, paravermis",113522738,96,140,176,-5,-85,-31
+"399",4722,63,126435862,"CB","PV-VI","VI, left, paravermis",113523224,96,135,174,-5,-83,-26
+"400",4725,63,126435846,"CB","PV-VIIB","VIIB, left, paravermis",113901823,96,160,168,-5,-77,-51
+"401",4724,63,126435830,"CB","PV-Crus II","Crus II, left, paravermis",113522736,96,148,178,-5,-87,-39
+"402",4723,63,126435814,"CB","PV-Crus I","Crus I, left, paravermis",113522741,96,138,176,-5,-85,-29
+"403",4722,63,126435798,"CB","PV-VI","VI, left, paravermis",113523223,96,133,173,-5,-82,-24
+"404",4736,62,126435810,"CB","He-V","V, left, lateral hemisphere",113257911,107,122,137,-16,-46,-13
+"405",4736,62,126435778,"CB","He-V","V, left, lateral hemisphere",113257910,107,123,135,-16,-44,-14
+"406",4742,62,126435780,"CB","He-VIIIA","VIIIA, left, lateral hemisphere",113258470,107,168,156,-16,-65,-59
+"407",4741,62,126435764,"CB","He-VIIB","VIIB, left, lateral hemisphere",113258306,107,166,163,-16,-72,-57
+"408",4740,62,126435748,"CB","He-Crus II","Crus II, left, lateral hemisphere",113258229,107,151,182,-16,-91,-42
+"409",4739,62,126435732,"CB","He-Crus I","Crus I, left, lateral hemisphere",113258198,107,140,179,-16,-88,-31
+"410",4742,62,126435890,"CB","He-VIIIA","VIIIA, left, lateral hemisphere",113258469,107,168,155,-16,-64,-59
+"411",4741,62,126435874,"CB","He-VIIB","VIIB, left, lateral hemisphere",113258305,107,166,162,-16,-71,-57
+"412",4740,62,126435858,"CB","He-Crus II","Crus II, left, lateral hemisphere",113258228,107,150,181,-16,-90,-41
+"413",4746,62,126435876,"CB","He-X","X, left, lateral hemisphere",113255684,107,151,126,-16,-35,-42
+"414",4744,62,126435860,"CB","He-IX","IX, left, lateral hemisphere",113255650,107,153,142,-16,-51,-44
+"415",4744,62,126435812,"CB","He-IX","IX, left, lateral hemisphere",113255651,107,151,142,-16,-51,-42
+"416",4743,62,126435796,"CB","He-VIIIB","VIIIB, left, lateral hemisphere",113255674,107,168,145,-16,-54,-59
+"417",4738,61,126435808,"CB","He-VI","VI, left, lateral hemisphere",113222836,121,128,149,-30,-58,-19
+"418",4736,61,126435792,"CB","He-V","V, left, lateral hemisphere",113222882,121,140,120,-30,-29,-31
+"419",4736,61,126435760,"CB","He-V","V, left, lateral hemisphere",113222857,121,143,119,-30,-28,-34
+"420",4742,61,126435746,"CB","He-VIIIA","VIIIA, left, lateral hemisphere",113222757,121,168,156,-30,-65,-59
+"421",4741,61,126435730,"CB","He-VIIB","VIIB, left, lateral hemisphere",113222725,121,166,161,-30,-70,-57
+"422",4740,61,126435714,"CB","He-Crus II","Crus II, left, lateral hemisphere",113222703,121,152,176,-30,-85,-43
+"423",4739,61,126439269,"CB","He-Crus I","Crus I, left, lateral hemisphere",113222762,121,147,177,-30,-86,-38
+"424",4739,61,126435888,"CB","He-Crus I","Crus I, left, lateral hemisphere",113222762,120,147,177,-29,-86,-38
+"425",4742,61,126435872,"CB","He-VIIIA","VIIIA, left, lateral hemisphere",113222756,121,168,155,-30,-64,-59
+"426",4741,61,126435856,"CB","He-VIIB","VIIB, left, lateral hemisphere",113222724,121,167,160,-30,-69,-58
+"427",4740,61,126435840,"CB","He-Crus II","Crus II, left, lateral hemisphere",113222702,121,154,175,-30,-84,-45
+"428",4739,61,126435824,"CB","He-Crus I","Crus I, left, lateral hemisphere",113222761,121,147,176,-30,-85,-38
