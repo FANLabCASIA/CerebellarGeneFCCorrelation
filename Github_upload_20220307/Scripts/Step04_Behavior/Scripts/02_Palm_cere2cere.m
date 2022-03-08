@@ -1,8 +1,8 @@
 %% Input and Output files
 clear;clc;
-cd /n02dat01/users/ypwang/AHBA/Github_20220301/Scripts/Step04_Behavior/Reference/
-od =  '/n02dat01/users/ypwang/AHBA/Github_20220301/Scripts/Step04_Behavior/Results/';
-SubID = textread( '/n02dat01/users/ypwang/AHBA/Github_20220301/Scripts/Step04_Behavior/Reference/ToPCA_211.txt','%s' );
+cd 　% Enter your path
+od =  '　';　% Enter your path
+SubID = textread( '　','%s' );　# Enter your path
 
 %% Read in FC of ROI 1:17 from FC matrix
 cere2cere_allsub = zeros( length( SubID ), 136 ); % 211*136

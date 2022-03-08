@@ -34,7 +34,7 @@ library(scales)
 library(basicTrendline)
 library(Rmisc)
 library(stringr)
-base.dir <- ''  # Modify these filepaths for your local directory structure
+base.dir <- '/n02dat01/users/ypwang/AHBA/Github_20220301'  # Modify these filepaths for your local directory structure
 # ------------
 
 

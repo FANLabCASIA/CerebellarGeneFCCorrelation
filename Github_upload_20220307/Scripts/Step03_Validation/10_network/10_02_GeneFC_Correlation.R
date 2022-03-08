@@ -46,7 +46,7 @@ library(stringr)
 
 # Modify these filepaths for your local directory structure
 # ----------------
-base.dir <- '/n02dat01/users/ypwang/AHBA/Github_20220301'
+base.dir <- ''   # Enter your path
 load(paste(base.dir, '/Output/RData/all_data_cere_net10.Rdata', sep = ''))
 function.lib <- paste(base.dir, '/Scripts/function_library.R', sep = '')
 source(function.lib)

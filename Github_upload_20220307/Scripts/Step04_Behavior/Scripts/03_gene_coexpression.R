@@ -44,8 +44,8 @@ library(ggthemes)
 
 ## Modify these filepaths for your local directory structure
 # ----------------
-setwd("/n02dat01/users/ypwang/AHBA/Github_20220301/Scripts/Step04_Behavior/Results/")
-base.dir <- '/n02dat01/users/ypwang/AHBA/Github_20220301' 
+setwd(" ") # Enter your path
+base.dir <- ' '  # Enter your path
 load(paste(base.dir, '/Output/RData/all_data_cere_net17.Rdata', sep = '')) # READ AHBA DATA
 function.lib <- paste(base.dir, '/Scripts/function_library.R', sep = '')
 source(function.lib) # SET BASE DIRECTORY, source function library
