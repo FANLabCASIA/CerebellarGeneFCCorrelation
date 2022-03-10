@@ -1,5 +1,53 @@
 # Function library for cerebellar Gene-FC analyses
 
+ahba_diff_expression_cere <- function(all_data, donor.nums, use.cere.networks, type, net_names, atlas_field, p){
+  
+  out <- averageWithinCereNetworks(all_data=all_data, 
+                                   donor.nums=donor.nums, 
+                                   use.cere.networks=use.cere.networks, 
+                                   type=type, 
+                                   net_names=net_names, 
+                                   atlas_field=atlas_field)
+  expr    <- out[[1]]  #  all.expr = num [1:20738, 1:28], rows means the 20738 genes, colums means the 4 donor * 7 networks name
+  regions <- out[[2]]  #  region_arr = donor_arr = chr[1: 28], 28 = 7 network * 4 donor, 28 is the region ID, 4 donor * 7 networks name
+  donors  <- out[[3]]  #  So here we get the averaged expression value for each gene(20738) in each networks(7) in each donors(4)
+  colnames(expr) <- paste(donors, regions, sep = '_')
+  
+  # Use limma to calculate differential expression for each network, relative to all others
+  fac              <- as.factor(regions)                # the network type of each column in 'expr', get 7 levels which corresponde to 7 networks name
+  design           <- model.matrix(~0 + fac)            # design matrix, 0 means no intercept
+  colnames(design) <- gsub('fac', '', colnames(design)) # colnames(design) = fac+networks name, eg., facCont, after this step, we get the colname euqal to the networks name
+  corfit           <- duplicateCorrelation(expr, design, block=donors) 
+  
+  # Calculate Differential expression for each region
+  sig.genes       <- NULL
+  cere.foldchange <- NULL
+  cere.foldchange[['q05_genes']] <- list()
+  
+  net <- buckner.names$sev[as.integer(p) + 1]
+  mult.term    <- round(1/(length(region.names)-1),6)
+  o.nets       <- region.names[region.names != net]   # name of the other networks, 
+  cur.contrast <- paste('1*', net, '-', mult.term, '*', paste(o.nets, collapse = paste('-', mult.term, '*', sep = '')), sep = '')
+  
+  # Make the contrast matrix
+  cmtx <- NULL
+  cmtx <- makeContrasts(contrasts=cur.contrast, levels=colnames(design)) # cmtx is our contrast matrix, eg., for vis, is1*Vis-0.166667*Default-0.166667*Cont-0.166667*Limbic-0.166667*VentAttn-0.166667*DorsAttn-0.166667*SomMot
+  tmplm   <- lmFit(expr, design, block=donors, correlation=corfit$consensus.correlation ) # Fit the linear model to the data
+  fit     <- eBayes(contrasts.fit( tmplm, cmtx ) ) # contrast.fit: fit the linear model to estimate a set of contrast
+  cere.foldchange[['fit_df']][[net]] <- fit        # cere.foldchange has three list: fit_df = fit; stats= ordered topTable(fit, number=Inf); q05_genes = row names of selected stats
+  tmp     <- topTable(fit, number=Inf)             # A number of summary statistics are presented by topTable() for the top genes and the selected contrast.
+  cere.foldchange[['stats']][[net]] <- tmp[order(rownames(tmp)),] 
+  
+  pos.idxs       <- which(cere.foldchange$stats[[net]]$logFC > 0)         # The logFC column gives the value of the contrast. Usually this represents a log2-fold change  between two or more experimental 
+  adjusted.ps    <- which(cere.foldchange$stats[[net]]$adj.P.Val <= .05)  # adj.P.Value is the p-value adjusted for multiple testing
+  genes.tmp      <- rownames(cere.foldchange$stats[[net]])[intersect(adjusted.ps, pos.idxs)]
+  cere.foldchange[['q05_genes']][[net]] <- unique(genes.tmp)
+  
+  cur_gene <- data.frame(t(c(length(cere.foldchange[['q05_genes']][[net]]), cere.foldchange[['q05_genes']][[net]])))
+  return(cur_gene)
+}
+
+
 ahba_diff_expression <- function(all_data, use.donors, use.regions, reg2yeo, dat2avg, rest.networks){
   
   out <- averageWithinCortNetworks(all_data=all_data, 
